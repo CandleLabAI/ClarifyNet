@@ -17,5 +17,3 @@ Above command will train aclnet for given number of epochs in ```src/config.py``
 To test aclnet with trained model, Run following command from ```/src``` directory.
 
 ```python models/test_model.py ``` 
-
-Above command will generate Precision, Recall, F1-Score, Error rate, Matthews Correlation Coefficient (MCC) and ROC AUC Curve. ROC-AUC Curve will be saved in ```inference/``` directory.
