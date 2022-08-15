@@ -12,6 +12,11 @@ Dehazing refers to removing the haze and restoring the details from hazy images.
 
 <p align="center"><img src="reports/figures/Qualitative_Results.png" width="840"></p>
 
+Visualization of ClarifyNet results on I-HAZE (I1 to I3), O-HAZE (O1 to O3), Dense-Haze (D1 to D3),
+and NH-HAZE (N1 to N3) datasets
+
+<p align="center"><img src="reports/figures/Results.png" width="840"></p>
+
 Project Organization
 ------------
 
