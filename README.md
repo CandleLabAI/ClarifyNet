@@ -70,17 +70,17 @@ We have used  I-HAZE, O-HAZE, Dense-Haze, and NH-HAZE Dataset. Download the data
 
 change the hyperparameters and configuration parameters according to need in ```src/config.py```.
 
-To train aclnet, Run following command from ```/src``` directory.
+To train clarifynet, Run following command from ```/src``` directory.
 
 ```python models/train_model.py``` 
 
 All the trained checkpoints for pre-training as well as full model training will be saved in ```/weights.```
 
-Above command will train aclnet for given number of epochs in ```src/config.py```.
+Above command will train clarifynet for given number of epochs in ```src/config.py```.
 
 ### Test performance
 
-To test aclnet with trained model, Run following command from ```/src``` directory.
+To test clarifynet with trained model, Run following command from ```/src``` directory.
 
 ```python models/test_model.py ``` 
 
