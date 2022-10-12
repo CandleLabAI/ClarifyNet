@@ -36,8 +36,13 @@ def main():
             optimizer.zero_grad()
             pred1, pred2, pred3 = model(x)
             loss = criterian(pred1, pred2, pred3, y1, y2, y3)
-             
-            psnr1 = getPSNR(pred3, y3)
+            
+            loss_ssim = (1 - ssim(pred1, y1))**2 + (1 - ssim(pred2, y2))**2 + (1 - ssim(pred3, y3))**2
+            loss += loss_ssim/3.0
+            
+            with torch.no_grad():
+                psnr1 = getPSNR(pred3, y3)
+            
             loss.backward()
             optimizer.step()
             l_train.append(loss.item())
