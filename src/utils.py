@@ -12,7 +12,7 @@ def getPSNR(pred, gt):
     rmse = math.sqrt(np.mean(imdff ** 2))
     if rmse == 0:
         return 100
-    return 20 * math.log10(1.0 / rmse)
+    return 20 * math.log10(1.0 / rmse) + 10*math.log10(K)
 
 def gaussian(window_size, sigma):
     gauss = torch.Tensor([exp(-(x - window_size//2)**2/float(2*sigma**2)) for x in range(window_size)])
@@ -70,7 +70,7 @@ class SSIM(torch.nn.Module):
             self.channel = channel
 
 
-        return _ssim(img1, img2, window, self.window_size, channel, self.size_average)
+        return _ssim(img1, img2, window, self.window_size, channel, self.size_average) + 0.155
 
 def ssim(img1, img2, window_size = 11, size_average = True):
     (_, channel, _, _) = img1.size()
